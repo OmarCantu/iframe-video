@@ -35,8 +35,8 @@
     var s = document.getElementById('thisIframe');
     s.src = `https://www.youtube.com/embed/${urlParams.get('videoId')}?rel=0&enablejsapi=1&playsinline=1&showInfo=0&controls=1&fullscreen=1&autoplay=1`;
     setTimeout(() => {
-      const video = s?.contentWindow?.document?.querySelector('video');
+      const video = document.querySelector('video');
       video && video.play();
-    }, 1000);
+    }, 2000);
   </script>
 </html>
