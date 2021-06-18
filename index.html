@@ -22,7 +22,7 @@
     <iframe
       id="thisIframe"
       width="100%" height="100%"
-      src="https://www.youtube.com/embed/jzD_yyEcp0M?rel=0&enablejsapi=1&playsinline=1&showInfo=0&controls=1&fullscreen=1&autoplay=1"
+      src="https://www.youtube.com/embed/XIMLoLxmTDw?rel=0&enablejsapi=1&playsinline=1&showInfo=0&controls=1&fullscreen=1&autoplay=1"
       frameborder="0"
       allowfullscreen="true"
       allow="autoplay"
@@ -30,13 +30,11 @@
     </iframe>
   </body>
   <script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    var s = document.getElementById('thisIframe');
-    s.src = `https://www.youtube.com/embed/${urlParams.get('videoId')}?rel=0&enablejsapi=1&playsinline=1&showInfo=0&controls=1&fullscreen=1&autoplay=1`;
     setTimeout(() => {
-      const video = s?.contentWindow?.document?.querySelector('video');
-      video && video.play();
-    }, 3000);
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      var s = document.getElementById('thisIframe');
+      s.src = `https://www.youtube.com/embed/${urlParams.get('videoId')}?rel=0&enablejsapi=1&playsinline=1&showInfo=0&controls=1&fullscreen=1&autoplay=1`;
+    }, 1000);
   </script>
 </html>
